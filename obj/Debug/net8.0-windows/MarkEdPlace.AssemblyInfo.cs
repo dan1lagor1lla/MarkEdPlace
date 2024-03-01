@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MarkEdPlace")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+667d4dd476ec10d022af5fea1581a3b05a19cec1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88ece2fc77170d14334a0117f410a7b456e6d48f")]
 [assembly: System.Reflection.AssemblyProductAttribute("MarkEdPlace")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MarkEdPlace")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

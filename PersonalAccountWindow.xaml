@@ -12,13 +12,16 @@
         SizeToContent="Height">
     <Grid
         Margin="35">
-        <StackPanel>
+        <DockPanel
+            LastChildFill="False">
             <TextBlock
+                DockPanel.Dock="Top"
                 Text="Профиль"
                 FontSize="45"
                 TextAlignment="Left"
                 Margin="0,0,0,30"/>
             <DockPanel
+                DockPanel.Dock="Top"
                 Margin="15,10">
                 <TextBlock
                     Text="Логин:"
@@ -34,8 +37,11 @@
                     Padding="10, 15"
                     FontSize="30"/>
             </DockPanel>
-            <Separator/>
+            <Separator
+                DockPanel.Dock="Top"
+                />
             <DockPanel
+                DockPanel.Dock="Top"
                 Margin="15,10">
                 <TextBlock
                     Text="Почта:"
@@ -51,8 +57,12 @@
                     Padding="10, 15"
                     FontSize="30"/>
             </DockPanel>
-            <Separator/>
+            <Separator
+                DockPanel.Dock="Top"
+                />
             <DockPanel
+                DockPanel.Dock="Top"
+                
                 Margin="15,10">
                 <TextBlock
                     Text="Пароль:"
@@ -68,7 +78,9 @@
                     FontSize="30"/>
             </DockPanel>
             <DockPanel
-                Margin="15,10">
+                Margin="15,10"
+                DockPanel.Dock="Top"
+                >
                 <TextBlock
                     Text="Новый пароль:"
                     MinWidth="205"
@@ -83,26 +95,30 @@
                     FontSize="30"/>
             </DockPanel>
             <Button
+                DockPanel.Dock="Top"
                 Content="Сменить пароль"
                 FontSize="25"
                 Padding="35,20"
                 HorizontalAlignment="Center"
                 Click="ChangePassword"
-                Margin="0,10"/>
-            <Button
+                Margin="0,10,0,45"/>
+            <UniformGrid
+                Columns="2"
+                DockPanel.Dock="Bottom"
+                VerticalAlignment="Bottom">
+                <Button
                 Content="Назад"
                 FontSize="25"
-                Padding="90,20"
+                Padding="90,15"
                 HorizontalAlignment="Center"
-                Click="BackToCatalog"
-                Margin="0,10"/>
-            <Button
+                Click="BackToCatalog"/>
+                <Button
                 Click="Quit"
                 Content="Выйти"
                 FontSize="25"
-                Padding="90,20"
-                HorizontalAlignment="Center"
-                Margin="0,10"/>
-        </StackPanel>
+                Padding="90,0"
+                HorizontalAlignment="Center"/>
+            </UniformGrid>
+        </DockPanel>
     </Grid>
 </Window>

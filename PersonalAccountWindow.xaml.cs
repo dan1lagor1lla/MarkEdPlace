@@ -42,7 +42,7 @@ namespace MarkEdPlace
         }
 
         private void EmailChanged(object sender, TextChangedEventArgs e)
-        {
+        { 
             string newEmail = ((TextBox)sender).Text;
             if (db.Users.FirstOrDefault(u => u.Email == newEmail && u.ID != user.ID) is not null)
             {

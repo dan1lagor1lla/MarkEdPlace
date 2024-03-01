@@ -96,7 +96,7 @@
                     <WrapPanel
                         MaxWidth="{Binding Path=Width, RelativeSource={RelativeSource AncestorType=Window}, Converter={StaticResource widthConverter}}"
                         ItemWidth="305"
-                        ItemHeight="500"/>
+                        ItemHeight="530"/>
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
             <ListBox.ItemTemplate>
@@ -118,6 +118,13 @@
                         <TextBlock
                             Text="{Binding Name}"
                             FontSize="15"
+                            TextWrapping="NoWrap"
+                            TextAlignment="Left"
+                            TextTrimming="WordEllipsis"
+                            Margin="5,5"/>
+                        <TextBlock
+                            Text="{Binding Quantity, StringFormat=Осталось: \{0\}}"
+                            FontSize="12.5"
                             TextWrapping="NoWrap"
                             TextAlignment="Left"
                             TextTrimming="WordEllipsis"

@@ -12,6 +12,11 @@
   <ItemGroup>
     <None Remove="icon.png" />
     <None Remove="Noah-Regular.ttf" />
+    <None Remove="productImages\cover.png" />
+    <None Remove="productImages\dic.png" />
+    <None Remove="productImages\his.png" />
+    <None Remove="productImages\mine.png" />
+    <None Remove="productImages\read.png" />
     <None Remove="resources\bin.png" />
     <None Remove="resources\cart.png" />
     <None Remove="resources\man.png" />
@@ -22,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.2">
       <PrivateAssets>all</PrivateAssets>
@@ -31,6 +37,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="productImages\cover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="productImages\dic.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="productImages\his.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="productImages\mine.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="productImages\read.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="resources\bin.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>

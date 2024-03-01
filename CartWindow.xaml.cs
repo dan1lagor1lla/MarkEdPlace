@@ -36,6 +36,8 @@ namespace MarkEdPlace
         private void PlusProduct(object sender, RoutedEventArgs e)
         {
             Cart cart = (Cart)((Button)sender).DataContext;
+            if (cart.Quantity + 1 > cart.Product.Quantity)
+                return;
             cart.Quantity += 1;
             db.SaveChanges();
             Products.Items.Refresh();

@@ -18,5 +18,12 @@ namespace MarkEdPlace
             newWindow.Show();
             oldWindow.Close();
         }
+
+        protected override void OnExit(ExitEventArgs e)
+        {
+            base.OnExit(e);
+            db.SaveChanges();
+            db.Dispose();
+        }
     }
 }

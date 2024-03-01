@@ -30,7 +30,7 @@ namespace MarkEdPlace
             db = ((App)App.Current).db;
             db.Users.Update(user);
 
-            Products.ItemsSource = db.Products.ToList();
+            Products.ItemsSource = db.Products.Where(p => p.Quantity > 0).ToList();
         }
 
         private void AddToCart(object sender, RoutedEventArgs e)
@@ -48,7 +48,8 @@ namespace MarkEdPlace
 
         private void OpenCartWindow(object sender, RoutedEventArgs e)
         {
-            ((App)App.Current).ReplaceWindow(this, new CartWindow(currentUser));
+            new CartWindow(currentUser).Show();
+            Close();
         }
 
         private void SearchFilterChanged(object sender, TextChangedEventArgs e)
