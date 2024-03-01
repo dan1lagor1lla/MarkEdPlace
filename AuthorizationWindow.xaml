@@ -1,0 +1,87 @@
+﻿<Window x:Class="MarkEdPlace.AuthorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MarkEdPlace"
+        mc:Ignorable="d"
+        Style="{DynamicResource {x:Type Window}}"
+        WindowStartupLocation="CenterScreen"
+        Height="850"
+        Width="850"
+        MinHeight="850"
+        MinWidth="750">
+    <Window.Resources>
+        <Style
+            TargetType="TextBox"
+            BasedOn="{StaticResource {x:Type TextBox}}">
+            <Setter
+                Property="FontSize"
+                Value="30"/>
+            <Setter
+                Property="Padding"
+                Value="20,25"/>
+        </Style>
+    </Window.Resources>
+    <Grid
+        Margin="50,0">
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="Auto"/>
+            <RowDefinition
+                Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                HorizontalAlignment="Center"
+                Margin="0,70,0,0">
+                    <TextBlock
+                        Text="MarkEdPlace"
+                        FontSize="75"/>
+                    <Image
+                        Source="resources/icon.png"
+                        Height="40"
+                        Margin="15,0"/>
+            </StackPanel>
+            <TextBlock
+                Text="Магазин концелярских товаров, учебников и школьных принадлежностей."
+                FontSize="20"/>
+        </StackPanel>
+        <StackPanel
+            Grid.Row="1"
+            Margin="50,75"
+            MaxWidth="850">
+            <TextBlock
+                Text="Добро пожаловать!"
+                FontSize="50"
+                HorizontalAlignment="Left"/>
+            <TextBlock
+                Text="Авторизируйтесь, чтобы начать"
+                FontSize="25"
+                Margin="0,0,0,20"
+                HorizontalAlignment="Left"/>
+            <TextBox
+                Name="LoginInput"
+                Uid="Логин"/>
+            <TextBox
+                Name="PasswordInput"
+                Uid="Пароль"
+                Margin="0,15"/>
+            <Button
+                Content="Начать"
+                Click="TryLogIn"
+                IsDefault="True"
+                FontSize="20"
+                Padding="0,17.5"
+                Margin="0,5,0,0"/>
+            <TextBlock
+                Text="У меня нет аккаунта"
+                MouseDown="OpenRegistrationWindow"
+                Style="{StaticResource HighlightOnHoverTextBlock}"
+                FontSize="20"
+                Margin="0,20"
+                HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,108 @@
+﻿<Window x:Class="MarkEdPlace.PersonalAccountWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MarkEdPlace"
+        mc:Ignorable="d"
+        Style="{StaticResource {x:Type Window}}"
+        WindowStartupLocation="CenterScreen"
+        Height="800"
+        Width="800"
+        SizeToContent="Height">
+    <Grid
+        Margin="35">
+        <StackPanel>
+            <TextBlock
+                Text="Профиль"
+                FontSize="45"
+                TextAlignment="Left"
+                Margin="0,0,0,30"/>
+            <DockPanel
+                Margin="15,10">
+                <TextBlock
+                    Text="Логин:"
+                    MinWidth="205"
+                    FontSize="30"
+                    TextAlignment="Left"
+                    VerticalAlignment="Center"/>
+                <TextBox
+                    Text="{Binding Path=Login}"
+                    TextChanged="LoginChanged"
+                    HorizontalAlignment="Stretch"
+                    Margin="20,0"
+                    Padding="10, 15"
+                    FontSize="30"/>
+            </DockPanel>
+            <Separator/>
+            <DockPanel
+                Margin="15,10">
+                <TextBlock
+                    Text="Почта:"
+                    MinWidth="205"
+                    FontSize="30"
+                    TextAlignment="Left"
+                    VerticalAlignment="Center"/>
+                <TextBox
+                    TextChanged="EmailChanged"
+                    Text="{Binding Path=Email}"
+                    HorizontalAlignment="Stretch"
+                    Margin="20,0"
+                    Padding="10, 15"
+                    FontSize="30"/>
+            </DockPanel>
+            <Separator/>
+            <DockPanel
+                Margin="15,10">
+                <TextBlock
+                    Text="Пароль:"
+                    MinWidth="205"
+                    FontSize="30"
+                    TextAlignment="Left"
+                    VerticalAlignment="Center"/>
+                <TextBox
+                    HorizontalAlignment="Stretch"
+                    Margin="20,0"
+                    Padding="10, 15"
+                    Name="OldPassword"
+                    FontSize="30"/>
+            </DockPanel>
+            <DockPanel
+                Margin="15,10">
+                <TextBlock
+                    Text="Новый пароль:"
+                    MinWidth="205"
+                    FontSize="30"
+                    TextAlignment="Left"
+                    VerticalAlignment="Center"/>
+                <TextBox
+                    HorizontalAlignment="Stretch"
+                    Margin="20,0"
+                    Name="NewPassword"
+                    Padding="10, 15"
+                    FontSize="30"/>
+            </DockPanel>
+            <Button
+                Content="Сменить пароль"
+                FontSize="25"
+                Padding="35,20"
+                HorizontalAlignment="Center"
+                Click="ChangePassword"
+                Margin="0,10"/>
+            <Button
+                Content="Назад"
+                FontSize="25"
+                Padding="90,20"
+                HorizontalAlignment="Center"
+                Click="BackToCatalog"
+                Margin="0,10"/>
+            <Button
+                Click="Quit"
+                Content="Выйти"
+                FontSize="25"
+                Padding="90,20"
+                HorizontalAlignment="Center"
+                Margin="0,10"/>
+        </StackPanel>
+    </Grid>
+</Window>

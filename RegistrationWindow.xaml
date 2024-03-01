@@ -1,0 +1,66 @@
+﻿<Window x:Class="MarkEdPlace.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MarkEdPlace"
+        mc:Ignorable="d"
+        Style="{DynamicResource {x:Type Window}}"
+        WindowStartupLocation="CenterScreen"
+        Height="750"
+        Width="750"
+        MinHeight="800"
+        MinWidth="650">
+    <Window.Resources>
+        <Style
+            TargetType="TextBox"
+            BasedOn="{StaticResource {x:Type TextBox}}">
+            <Setter
+                Property="FontSize"
+                Value="30"/>
+            <Setter
+                Property="Padding"
+                Value="15, 25"/>
+            <Setter
+                Property="Margin"
+                Value="0,7.5"/>
+        </Style>
+    </Window.Resources>
+    <Grid
+        Margin="100,50"
+        VerticalAlignment="Center">
+        <StackPanel
+            MaxWidth="900">
+            <TextBlock
+                Text="Регистрация аккаунта"
+                FontSize="50"
+                TextAlignment="Left"
+                Margin="0,0,0,15"/>
+            <TextBox
+                Name="LoginInput"
+                Uid="Логин"/>
+            <TextBox
+                Name="EmailInput"
+                Uid="Электронная почта"/>
+            <TextBox
+                Name="PasswordInput"
+                Uid="Пароль"/>
+            <TextBox
+                Name="PasswordCheckInput"
+                Uid="Пароль ещё раз"/>
+            <Button
+                Content="Зарегистрироваться"
+                Click="TryRegister"
+                IsDefault="True"
+                FontSize="20"
+                Padding="0,15"
+                Margin="0,10,0,0"/>
+            <TextBlock
+                Text="У меня уже есть аккаунт"
+                Style="{StaticResource HighlightOnHoverTextBlock}"
+                MouseDown="OpenAuthorizationWindow"
+                FontSize="20"
+                Margin="0,15"/>
+        </StackPanel>
+    </Grid>
+</Window>
